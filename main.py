@@ -1,6 +1,12 @@
-def main():
-    print("Hello from luigi-practice!")
+import luigi
+import time
 
 
-if __name__ == "__main__":
-    main()
+class HelloLuigi(luigi.Task):
+    def run(self):
+        time.sleep(60)
+        print("hello")
+
+
+if __name__ == '__main__':
+    luigi.run()
